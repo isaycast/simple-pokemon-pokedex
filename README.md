@@ -1,26 +1,41 @@
-# Getting Started with Create React App
+# Configuración de Variables de Entorno
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para que el proyecto funcione correctamente, es necesario configurar algunas variables de entorno. Estas variables permiten que tu aplicación de React se comunique con servicios externos o backend sin hardcodear URLs o tokens directamente en el código fuente.
 
-## Available Scripts
+## Creando el Archivo `.env`
 
-In the project directory, you can run:
+Crea un archivo `.env` en la raíz de tu proyecto (al mismo nivel que `src/`, `public/`, y `package.json`). Este archivo no debe ser añadido al control de versiones (git).
+
+
+Añade la siguiente línea en tu archivo `.env`:
+```
+REACT_APP_API_URL=http://127.0.0.1:8000/pokemon
+```
+
+## Antes de ejecutar
+
+Asegurate que tu  código de backend este ejecutado correctamente 
+[backendAPI](https://github.com/isaycast/django-pokemon-api)
+
+Es necesario correr el siguiente bloque de código para instalar todas las librerias.
+```
+npm install
+```
+
+## Scripts Disponibles
+
+En el directorio del proyecto, puedes ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ejecuta la aplicación en modo de desarrollo.  
+Abre [http://localhost:3000](http://localhost:3000) para verla en tu navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
+La página se recargará cuando hagas cambios.  
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción en la carpeta `build`.  
+Agrupa correctamente React en modo de producción y optimiza la compilación para el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
